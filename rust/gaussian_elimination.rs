@@ -1,3 +1,4 @@
+
 // Gaussian Elimination of Quadratic Matrices
 // Takes an augmented matrix as input, returns vector of results
 // Wikipedia reference: augmented matrix: https://en.wikipedia.org/wiki/Augmented_matrix
