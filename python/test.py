@@ -88,6 +88,8 @@ unique = {1, 2, 3}
 result = add(1, 2)
 value = mapping["a"]
 
+a, _ = a, b
+
 try:
     raise ValueError("x")
 except ValueError as err:

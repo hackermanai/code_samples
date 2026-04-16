@@ -124,6 +124,8 @@ foo_proc :: proc() {
 
 user_input^ = User_Input
 
+a, _ = a, b
+
 arr := [3]int{1, 2, 3}
 slice := []int{1, 2, 3}
 m := map[string]int{

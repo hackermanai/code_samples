@@ -200,6 +200,8 @@ where
 {
 }
 
+a, _ = a, b
+
 let_closure: fn(i32) -> i32 = add_one;
 
 let tuple = (1, "x", true);
