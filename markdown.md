@@ -21,12 +21,15 @@ Unordered list:
 - Unordered list item
 - Another item
 
-### Code Block
+### Code Blocks
 
 ```python
 def hello_world():
     print("Hello, world!")
 ```
+
+    def hello_world():
+        print("Hello, world!")
 
 ### Links and Images
 
@@ -43,7 +46,7 @@ def hello_world():
 
 ### Task List
 
-- [x] Task 1
+- [X] Task 1
 - [ ] Task 2
 - [ ] Task 3
 
