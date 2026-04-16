@@ -7,13 +7,17 @@
 "a\"b"
 'a'
 '\n'
+`raw string`
 
-@
-@private
-@cold
+@(private)
+@(cold)
+@(require)
+@(default_calling_convention="odin")
 
 #
-#+optional_ok
+#assert
+#optional_ok
+#load("path/to/file", string)
 
 :
 ::
@@ -35,11 +39,11 @@ foo
 foo()
 foo(
 foo.bar
-foo::bar
 
 nil
 true
 false
+context
 
 int
 u8
@@ -56,10 +60,14 @@ bool
 string
 cstring
 uintptr
+rawptr
+typeid
+any
 
 x := 123
 y := 0..10
 z := 1.0e-3
+w := 123i
 
 main :: proc() {
 }
@@ -114,6 +122,8 @@ foo_proc :: proc() {
     }
 }
 
+user_input^ = User_Input
+
 arr := [3]int{1, 2, 3}
 slice := []int{1, 2, 3}
 m := map[string]int{
@@ -127,3 +137,4 @@ q := Point{x = 1, y = 2}
 using context
 
 defer fmt.println("done")
+
