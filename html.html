@@ -1,93 +1,48 @@
 
+<!-- comment -->
+
 <!doctype html>
 
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern HTML Syntax Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test</title>
+
     <style>
-        :root {
-            --bg: #0f172a;
-            --panel: #111827;
-            --text: #e5e7eb;
-            --muted: #94a3b8;
-            --accent: #38bdf8;
-            --border: #1f2937;
-        }
-        * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            font-family: Inter, system-ui, sans-serif;
-            background: linear-gradient(180deg, #020617, #0f172a);
-            color: var(--text);
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 48px 20px;
-        }
-        .card {
-            background: rgba(17, 24, 39, 0.9);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-        }
-        h1 {
-            margin-top: 0;
-            font-size: 2rem;
-        }
-        p { color: var(--muted); }
-        button {
-            margin-top: 16px;
-            padding: 10px 16px;
-            border: 0;
-            border-radius: 10px;
-            background: var(--accent);
-            color: #082f49;
-            font: inherit;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        button:hover { filter: brightness(1.08); }
-        .output {
-            margin-top: 16px;
-            padding: 12px 14px;
-            border-left: 3px solid var(--accent);
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
-            color: var(--text);
-        }
+        body { color: red; }
+        .box { padding: 8px; }
     </style>
-</head>
-
-<body>
-    <main class="container">
-        <section class="card">
-            <h1>Modern HTML Syntax Test</h1>
-            <p>This example uses semantic HTML with embedded CSS and JavaScript only.</p>
-
-            <button id="greetButton" type="button">Click to Greet</button>
-            <div id="output" class="output">Waiting for interaction...</div>
-        </section>
-    </main>
 
     <script>
-        const button = document.getElementById("greetButton");
-        const output = document.getElementById("output");
-
-        function greet(name) {
-            return `Hello, ${name}!`;
-        }
-
-        button.addEventListener("click", () => {
-            const now = new Date().toLocaleTimeString();
-            output.textContent = `${greet("World")} Current time: ${now}`;
-        });
+        const x = 1;
+        function hi() { return x; }
     </script>
+</head>
+<body>
+    <h1>Hello</h1>
 
+    <div>
+        <span>text</span>
+        <a href="https://example.com">link</a>
+        <img src="x.png" alt="x">
+        <input type="text" disabled>
+        <br>
+        <hr>
+    </div>
+
+    <div
+        id="main"
+        class="box"
+        data-x="123"
+        aria-label="label"
+    >
+        content
+    </div>
+
+    <ul>
+        <li>one</li>
+        <li>two</li>
+    </ul>
 </body>
 </html>
