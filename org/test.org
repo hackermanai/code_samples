@@ -1,0 +1,243 @@
+
+#+title: Org Mode Feature Showcase
+#+subtitle: Native syntax test file for Hackerman Text
+#+author: Michael
+#+date: 2026-04-17
+#+startup: overview
+#+options: toc:2 num:nil
+
+#+begin_comment
+This file is meant to exercise common Org syntax:
+- metadata
+- headlines and folding
+- TODO states and checkboxes
+- priorities, tags, timestamps, planning lines
+- drawers and properties
+- links
+- emphasis / verbatim / code
+- lists and nested lists
+- tables
+- quote / example / src blocks
+- results blocks
+#+end_comment
+
+* TODO Inbox [#A] :work:editor:
+SCHEDULED: <2026-04-18 Sat>
+:PROPERTIES:
+:ID:       inbox-001
+:CUSTOM_ID: inbox
+:END:
+
+Capture rough thoughts here.
+
+- [ ] Tighten Org lexer
+- [X] Add header folding
+- [-] Review inline emphasis edge cases
+  - [X] *bold*
+  - [X] /italic/
+  - [X] _underline_
+  - [X] =verbatim=
+  - [X] ~code~
+  - [ ] +strike-through+
+
+Plain links:
+- https://hackerman.ai
+- mailto:michael@example.com
+
+Descriptive links:
+- [[https://orgmode.org][Org mode homepage]]
+- [[file:notes.org][Local file]]
+- [[sh:pwd][Shell command]]
+
+* DONE Project Notes [#B] :notes:
+CLOSED: [2026-04-16 Fri 21:30]
+
+Org makes structure feel lightweight.
+
+** Headline levels
+
+*** Level 3
+Some text under a third-level heading.
+
+**** Level 4
+More text.
+
+***** Level 5
+Even more text.
+
+****** Level 6
+Deep heading test.
+
+** Planning keywords
+
+DEADLINE: <2026-04-25 Sat>
+SCHEDULED: <2026-04-20 Mon>
+CLOSED: [2026-04-15 Wed]
+
+** Inline markup
+
+You can mix *bold*, /italic/, _underline_, +strike+, =verbatim=, and ~code~ in one line.
+
+Markup next to punctuation should still look natural: *important*, /subtle/, ~snippet~, =literal=.
+
+** Properties drawer
+
+:PROPERTIES:
+:Owner: Michael
+:Status: Active
+:Style:  Minimal
+:END:
+
+This section contains a drawer above and normal text below.
+
+* Lists
+
+** Unordered
+- First item
+- Second item
+  - Nested item
+  - Another nested item
+    - Third level
+- Final item
+
+** Ordered
+1. First ordered item
+2. Second ordered item
+   1. Nested ordered item
+   2. Another nested ordered item
+3. Third ordered item
+
+** Mixed with checkboxes
+- [ ] Open issue
+- [X] Finished item
+- [-] Partially complete
+  1. [X] Child task
+  2. [ ] Remaining task
+
+* Tables
+
+** Simple table
+| Name      | Role      | Active |
+|-----------+-----------+--------|
+| Michael   | Founder   | yes    |
+| Hackerman | Editor    | yes    |
+| Org mode  | Format    | yes    |
+
+** Alignment-like table content
+| Key         | Value                            |
+|-------------+----------------------------------|
+| theme       | minimal                          |
+| startup     | overview                         |
+| website     | [[https://hackerman.ai][hackerman.ai]] |
+| code style  | latency-first                    |
+
+* Blocks
+
+** Quote block
+#+begin_quote
+Org mode is one of those formats that scales from a quick note
+to a full publishing workflow without feeling heavy.
+#+end_quote
+
+** Example block
+#+begin_example
+$ hackerman notes.org
+Opening file...
+Lexer: org
+Fold headers: enabled
+#+end_example
+
+** Center block
+#+begin_center
+Centered text block test
+#+end_center
+
+** Comment block
+#+begin_comment
+This block should usually be visually distinct but not noisy.
+#+end_comment
+
+** Source blocks
+
+#+begin_src python :results output :exports both
+name = "Michael"
+print(f"Hello from Python, {name}.")
+#+end_src
+
+#+RESULTS:
+: Hello from Python, Michael.
+
+#+begin_src javascript :results output :exports both
+const name = "Michael";
+console.log(`Hello from JavaScript, ${name}.`);
+#+end_src
+
+#+RESULTS:
+: Hello from JavaScript, Michael.
+
+#+begin_src lua :results output :exports both
+local name = "Michael"
+print("Hello from Lua, " .. name .. ".")
+#+end_src
+
+#+RESULTS:
+: Hello from Lua, Michael.
+
+#+begin_src bash :results output :exports both
+echo "Hello from Bash."
+pwd
+#+end_src
+
+#+RESULTS:
+: Hello from Bash.
+: /tmp/example
+
+* Drawers and logbook
+
+** TODO Review lexer colors
+:LOGBOOK:
+- State "TODO"       from              [2026-04-17 Fri 15:00]
+:END:
+
+Some ordinary paragraph text after a logbook drawer.
+
+* Timestamps
+
+Active timestamp: <2026-04-17 Fri>
+Inactive timestamp: [2026-04-17 Fri]
+Range: <2026-04-17 Fri 10:00-12:00>
+Date range: <2026-04-17 Fri>--<2026-04-19 Sun>
+
+* Tags and priorities [#C] :org:test:syntax:
+
+Headline with tags and priority cookie.
+
+** TODO Tagged child :child:
+SCHEDULED: <2026-04-19 Sun>
+
+More text here.
+
+* Export-ish metadata lines
+
+#+caption: Example caption
+#+name: tbl-example
+#+attr_html: :class wide
+#+attr_org: :width 80%
+
+| A | B |
+|---+---|
+| 1 | 2 |
+
+* Final notes
+
+This file is intentionally varied so the lexer can exercise:
+- line-based constructs
+- inline constructs
+- nested structure
+- drawers
+- code blocks
+- tables
+- planning metadata
+- checkboxes
+- links
+
