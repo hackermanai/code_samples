@@ -1,0 +1,35 @@
+
+diff --git a/src/main.c b/src/main.c
+index 1234567..89abcde 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -1,9 +1,10 @@
+ #include <stdio.h>
+ 
+ int main(void) {
+-    printf("old\n");
++    printf("new\n");
++    printf("added line\n");
+     return 0;
+ }
+\ No newline at end of file
+
+diff --git a/README.md b/README.md
+index aaaaaaa..bbbbbbb 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,8 @@
+ # Project
+ 
+ Some context line.
+-Some removed text.
++Some added text.
++Another added text.
+ Final context line.
+
+@@ -20,3 +22,4 @@
+ Context A
+-Delete me
++Replace me
++And me
+
