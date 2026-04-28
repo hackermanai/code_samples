@@ -212,6 +212,12 @@ pwd
 : Hello from Bash.
 : /tmp/example
 
+** Assistants
+
+#+begin_assistant
+Hello, how can I help you?
+#+end_assistant
+
 * Drawers and logbook
 
 ** TODO Review lexer colors
