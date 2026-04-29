@@ -15,6 +15,10 @@ f"{items[0].name}"
 f"foo {{ color: black; }}"
 f"foo {{ color: black; }"
 
+f"""
+{ foo("") }
+"""
+
 @
 @decorator
 @decorator_name
@@ -112,4 +116,13 @@ lambda_fn = lambda x: x + 1
 @decorator
 def decorated():
     pass
+    
+x = """hello"""
+
+def main():
+    """
+    This should be foldable.
+    """
+    
+    return 0
 
