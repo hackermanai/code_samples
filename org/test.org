@@ -28,6 +28,14 @@ SCHEDULED: <2026-04-18 Sat>
 :CUSTOM_ID: inbox
 :END:
 
+#+begin_quote
+This is Org-mode.
+#+end_quote
+
+#+begin_updated
+Updated 2026-04-29: This is something new.
+#+end_updated
+
 Capture rough thoughts here.
 
 - [ ] Tighten Org lexer
