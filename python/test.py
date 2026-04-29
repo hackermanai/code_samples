@@ -8,6 +8,13 @@
 """triple double"""
 '''triple single'''
 
+f"hello {name + 1}"
+fr"\s+ {value}"
+f"{foo(bar)}"
+f"{items[0].name}"
+f"foo {{ color: black; }}"
+f"foo {{ color: black; }"
+
 @
 @decorator
 @decorator_name
