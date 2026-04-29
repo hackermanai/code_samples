@@ -132,41 +132,35 @@ This section contains a drawer above and normal text below.
 | Org mode  | Format    | yes    |
 
 ** Alignment-like table content
-| Key         | Value                            |
-|-------------+----------------------------------|
-| theme       | minimal                          |
-| startup     | overview                         |
+| Key         | Value                                  |
+|-------------+----------------------------------------|
+| theme       | minimal                                |
+| startup     | overview                               |
 | website     | [[https://hackerman.ai][hackerman.ai]] |
-| code style  | latency-first                    |
+| code style  | latency-first                          |
 
 * Blocks
 
 ** Quote block
 
 #+begin_quote
-
 Org mode is one of those formats that scales from a quick note
 to a full publishing workflow without feeling heavy.
-
 #+end_quote
 
 ** Example block
 
 #+begin_example
-
 $ hackerman notes.org
 Opening file...
 Lexer: org
 Fold headers: enabled
-
 #+end_example
 
 ** Center block
 
 #+begin_center
-
 Centered text block test
-
 #+end_center
 
 ** Comment block
@@ -222,9 +216,9 @@ pwd
 
 ** Assistants
 
-#+begin_assistant
+#+begin_assist
 Hello, how can I help you?
-#+end_assistant
+#+end_assist
 
 * Drawers and logbook
 
