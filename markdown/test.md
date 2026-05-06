@@ -9,6 +9,9 @@ This is a paragraph with **bold text**, *italic text*, and `inline code`.
 >
 > It can span multiple lines.
 
+> [!CONTEXT]
+> This is some context
+
 Nested ordered list:
 
 1. First ordered list item
