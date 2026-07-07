@@ -49,7 +49,7 @@ def decode(B, x_low, x_high, m):
     x_high (int)            : upper bound of x
     m (int)                 : number of bits
     """
-
+    
     return x_low + int((''.join(map(str, B))), 2) * ((x_high - x_low) / ((2 ** m) - 1))
 
 assert int(decode([1, 1, 0, 0, 1], -10, 14, 5)) == 9
@@ -63,6 +63,7 @@ def generate_population(f, n_pop, x_range, y_range, m_bits):
     y_range (list)          : range of y
     m_bits (int)            : number of bits
     """
+    
     pop_lst = []
     for i in range(n_pop):
         x = random.randint(x_range[0], x_range[1])
