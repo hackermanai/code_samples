@@ -24,10 +24,6 @@ This file is meant to exercise common Org syntax:
 This file intentionally avoids executable Org/Babel features.
 #+end_comment
 
-#+begin_quote
-This is Org-mode.
-#+end_quote
-
 #+begin_updated
 Updated 2026-04-29: This is something new.
 #+end_updated
@@ -53,23 +49,22 @@ Descriptive links:
 - [[file:notes.org][Local file]]
 - [[sh:pwd][Shell command]]
 
-* DONE Project Notes [#B] :notes:
-CLOSED: [2026-04-16 Fri 21:30]
-
-Org makes structure feel lightweight.
-
 ** Headline levels
 
 *** Level 3
+
 Some text under a third-level heading.
 
 **** Level 4
+
 More text.
 
 ***** Level 5
+
 Even more text.
 
 ****** Level 6
+
 Deep heading test.
 
 ** Planning keywords
@@ -81,7 +76,6 @@ CLOSED: [2026-04-15 Wed]
 ** Inline markup
 
 You can mix *bold*, /italic/, _underline_, +strike+, =verbatim=, and ~code~ in one line.
-
 Markup next to punctuation should still look natural: *important*, /subtle/, ~snippet~, =literal=.
 
 ** Properties drawer
@@ -97,37 +91,42 @@ This section contains a drawer above and normal text below.
 * Lists
 
 ** Unordered
+
 - First item
 - Second item
-  - Nested item
-  - Another nested item
-    - Third level
+    - Nested item
+    - Another nested item
+        - Third level
 - Final item
 
 ** Ordered
+
 1. First ordered item
 2. Second ordered item
-   1. Nested ordered item
-   2. Another nested ordered item
+    1. Nested ordered item
+    2. Another nested ordered item
 3. Third ordered item
 
 ** Mixed with checkboxes
+
 - [ ] Open issue
 - [X] Finished item
 - [-] Partially complete
-  1. [X] Child task
-  2. [ ] Remaining task
+    1. [X] Child task
+    2. [ ] Remaining task
 
 * Tables
 
 ** Simple table
+
 | Name      | Role      | Active |
 |-----------+-----------+--------|
 | Michael   | Founder   | yes    |
-| Hackerman | Editor    | yes    |
+| Koi       | Editor    | yes    |
 | Org mode  | Format    | yes    |
 
 ** Alignment-like table content
+
 | Key         | Value                                  |
 |-------------+----------------------------------------|
 | theme       | minimal                                |
@@ -144,21 +143,6 @@ Org mode is one of those formats that scales from a quick note
 to a full publishing workflow without feeling heavy.
 #+end_quote
 
-** Example block
-
-#+begin_example
-$ hackerman notes.org
-Opening file...
-Lexer: org
-Fold headers: enabled
-#+end_example
-
-** Center block
-
-#+begin_center
-Centered text block test
-#+end_center
-
 ** Comment block
 
 #+begin_comment
@@ -169,35 +153,12 @@ This block should usually be visually distinct but not noisy.
 
 ** Source blocks
 
-#+begin_src python
+#+begin_src
 
 name = "Michael"
 print(f"Hello from Python, {name}.")
 
 #+end_src
-
-#+RESULTS: True
-: Hello from Python, Michael.
-
-#+begin_src javascript :results output :exports both
-
-const name = "Michael";
-console.log(`Hello from JavaScript, ${name}.`);
-
-#+end_src
-
-#+RESULTS: True
-: Hello from JavaScript, Michael.
-
-#+begin_src lua :results output :exports both
-
-local name = "Michael"
-print("Hello from Lua, " .. name .. ".")
-
-#+end_src
-
-#+RESULTS: True
-: Hello from Lua, Michael.
 
 #+begin_src bash :results output :exports both
 
@@ -205,16 +166,6 @@ echo "Hello from Bash."
 pwd
 
 #+end_src
-
-#+RESULTS:
-: Hello from Bash.
-: /tmp/example
-
-** Assistants
-
-#+begin_assist
-Hello, how can I help you?
-#+end_assist
 
 * Drawers and logbook
 
@@ -224,23 +175,12 @@ Hello, how can I help you?
 - State "TODO"       from              [2026-04-17 Fri 15:00]
 :END:
 
-Some ordinary paragraph text after a logbook drawer.
-
 * Timestamps
 
 Active timestamp: <2026-04-17 Fri>
 Inactive timestamp: [2026-04-17 Fri]
 Range: <2026-04-17 Fri 10:00-12:00>
 Date range: <2026-04-17 Fri>--<2026-04-19 Sun>
-
-* Tags and priorities [#C] :org:test:syntax:
-
-Headline with tags and priority cookie.
-
-** TODO Tagged child :child:
-SCHEDULED: <2026-04-19 Sun>
-
-More text here.
 
 * Export-ish metadata lines
 
