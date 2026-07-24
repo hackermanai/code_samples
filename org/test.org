@@ -1,32 +1,28 @@
 
 #+title: Org Test File
-#+subtitle: Syntax test for Hackerman Text's Org lexer
+#+subtitle: Syntax test file for Koi's Org lexer
 #+author: @asyncze
 #+date: 2026-04-17
-#+startup: overview
-#+options: toc:2 num:nil
 
 #+begin_comment
 This file is meant to exercise common Org syntax:
+
 - metadata
 - headlines and folding
 - TODO states and checkboxes
-- priorities, tags, timestamps, planning lines
+- priorities, tags, timestamps
+- planning lines
 - drawers and properties
 - links
-- emphasis / verbatim / code
-- lists and nested lists
+- inline emphasis
+- lists
 - tables
-- quote / example / src blocks
-- results blocks
-#+end_comment
+- block syntax
+- custom blocks
+- export metadata
 
-* TODO Inbox [#A] :work:editor:
-SCHEDULED: <2026-04-18 Sat>
-:PROPERTIES:
-:ID:       inbox-001
-:CUSTOM_ID: inbox
-:END:
+This file intentionally avoids executable Org/Babel features.
+#+end_comment
 
 #+begin_quote
 This is Org-mode.
@@ -259,14 +255,28 @@ More text here.
 
 * Final notes
 
-This file is intentionally varied so the lexer can exercise:
-- line-based constructs
-- inline constructs
-- nested structure
+This file intentionally exercises Org as a structured text format.
+
+Included:
+
+- metadata
+- headlines
+- folding
+- inline markup
 - drawers
-- code blocks
+- planning lines
+- lists
 - tables
-- planning metadata
-- checkboxes
+- timestamps
 - links
+- standard blocks
+- custom blocks
+
+Excluded:
+
+- source execution
+- Babel
+- RESULTS blocks
+- runtime integration
+- language evaluation
 
