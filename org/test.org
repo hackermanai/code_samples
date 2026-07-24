@@ -46,7 +46,7 @@ Plain links:
 
 Descriptive links:
 - [[https://orgmode.org][Org mode homepage]]
-- [[file:notes.org][Local file]]
+- [[file:notes.org]]
 - [[sh:pwd][Shell command]]
 
 ** Headline levels
