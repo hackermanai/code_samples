@@ -6,9 +6,9 @@ local entries = {
 }
 
 local function print_entries(entries)
-    for _, entry in ipairs(entries) do
-        if entry.enabled then
-            print(entry.name .. ": " .. entry.value)
+    for _, item in ipairs(entries) do
+        if item.enabled then
+            print(item.name .. ": " .. item.value)
         end
     end
 end
